@@ -3,32 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moj Prvi Sajt</title>
+    <title>Baza Automobila</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            margin: 20px;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
         }
-        .container {
-            max-width: 600px;
-            margin: auto;
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
         }
-        h1 {
-            color: #333;
+        label {
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Zdravo, ovo je moj prvi sajt!</h1>
-        <p>Ovo je jednostavna stranica napravljena uz pomoć HTML-a i CSS-a.</p>
-    </div>
+
+    <h2>Baza Automobila</h2>
+    
+    <form id="carForm">
+        <label for="brand">Marka:</label>
+        <input type="text" id="brand" name="brand" required>
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+
+        <label for="year">Godište:</label>
+        <input type="number" id="year" name="year" required>
+
+        <label for="vin">Broj šasije (VIN):</label>
+        <input type="text" id="vin" name="vin" required>
+
+        <label for="repairs">Evidencija popravki:</label>
+        <input type="text" id="repairs" name="repairs" required>
+
+        <button type="submit">Sačuvaj automobil</button>
+    </form>
+
 </body>
 </html>
